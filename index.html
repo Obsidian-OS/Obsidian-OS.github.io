@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObsidianOS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #0d1117;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        nav {
+            background-color: #161b22;
+            width: 100%;
+            padding: 0.8rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .nav-logo {
+            max-height: 40px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #9b59b6;
+        }
+        header {
+            background: linear-gradient(90deg, #1f6feb, #9b59b6);
+            width: 100%;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .logo {
+            max-width: 120px;
+            margin-bottom: 1rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        main {
+            max-width: 800px;
+            padding: 2rem 1rem;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(90deg, #1f6feb, #9b59b6);
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        footer {
+            margin-top: auto;
+            padding: 1rem;
+            background-color: #161b22;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <img src="logo.png" alt="ObsidianOS Logo" class="nav-logo">
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/docs/">Docs</a>
+                <a href="https://github.com/Obsidian-OS/">GitHub</a>
+                <a href="/download.html">Download</a>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <img src="logo.png" alt="ObsidianOS Logo" class="logo">
+        <h1>ObsidianOS</h1>
+        <p>The Arch-based distro with A/B partitioning for maximum reliability</p>
+    </header>
+    <main>
+        <p>
+            ObsidianOS is an Arch-based Linux distro with an A/B partition style.
+            If a package has a breaking change that causes some issues, you can just reboot into the other partition and restore the other one.
+            All of this is done without BTRFS relying on the stability of ext4.
+        </p>
+        <a href="/download.html" class="download-btn">⬇ Download Now</a>
+    </main>
+    <footer>
+        &copy; 2025 ObsidianOS Project — <a href="/docs/" style="color:#9b59b6;">Docs</a> | <a href="https://github.com/Obsidian-OS/" style="color:#1f6feb;">GitHub</a>
+    </footer>
+</body>
+</html>
