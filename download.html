@@ -3,99 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ObsidianOS Download</title>
-    <style>
-	@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
-        body {
-            font-family: "Cascadia Code", sans-serif;
-            margin: 0;
-            background-color: #0d1117;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        nav {
-            background-color: #000000;
-            width: 100%;
-            padding: 0.8rem 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-        .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .nav-logo {
-            max-height: 40px;
-	    filter: drop-shadow(0 0 2px #ffffff);
-			margin-left: 1.5rem;
-        }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover {
-            color: #9b59b6;
-        }
-        header {
-            background: linear-gradient(to left, #1f6feb 0%,#400080 100%);
-            width: 100%;
-            padding: 2rem 1rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        .logo {
-            max-width: 120px;
-            margin-bottom: 1rem;
-            filter: drop-shadow(0 0 2px #9b59b6);
-	}
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
-        main {
-            max-width: 800px;
-            padding: 2rem 1rem;
-        }
-        .download-btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(90deg, #1f6feb, #9b59b6);
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-top: 2rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .download-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-        footer {
-            margin-top: auto;
-            padding: 1rem;
-            background-color: #161b22;
-            font-size: 0.9rem;
-            color: #aaa;
-        }
-    </style>
+    <title>ObsidianOS Installation</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
@@ -105,7 +14,7 @@
                 <a href="/">Home</a>
                 <a href="/docs/">Docs</a>
                 <a href="https://github.com/Obsidian-OS/">GitHub</a>
-                <b><a href="/download.html">Download</a></b>
+                <b><a href="/download.html">Install</a></b>
             </div>
         </div>
     </nav>
@@ -116,11 +25,11 @@
     </header>
     <main>
         <p>
-            As ObsidianOS is image-based, the installation is quite diffrent than arch.<br>
-            Premade archisos are not ready yet, so you must either:<br>
+            As ObsidianOS is image-based, the installation is quite diffrent than Arch.<br>
+            Premade ISOs are not ready yet, so you must either:<br>
             <ol>
-                <li><a href="https://github.com/Obsidian-OS/archiso">Create your own archisos</a>, or</li>
-                <li>Install <a href="https://github.com/Obsidian-OS/mkobsidiansfs">mkobsidiansfs</a> and <a href="https://github.com/Obsidian-OS/obsidianctl">obsidianctl</a> to install from an arch host.</li>
+                <li><a href="https://github.com/Obsidian-OS/archiso">Create your own ISO</a>, or</li>
+                <li>Install <a href="https://github.com/Obsidian-OS/mkobsidiansfs">mkobsidiansfs</a> and <a href="https://github.com/Obsidian-OS/obsidianctl">obsidianctl</a> to install ObsidianOS on a disk from an Arch host.</li>
             </ol>
             Then you will need to follow the <a href="/docs/install">installation guide</a>.
 	</p>
