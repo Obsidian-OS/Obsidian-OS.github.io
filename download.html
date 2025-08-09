@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ObsidianOS</title>
+    <title>ObsidianOS Download</title>
     <style>
 	@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
         body {
@@ -104,22 +104,25 @@
                 <a href="/">Home</a>
                 <a href="/docs/">Docs</a>
                 <a href="https://github.com/Obsidian-OS/">GitHub</a>
-                <a href="/download.html">Download</a>
+                <b><a href="/download.html">Download</a></b>
             </div>
         </div>
     </nav>
     <header>
         <img src="logo.png" alt="ObsidianOS Logo" class="logo">
-        <h1>ObsidianOS</h1>
-        <p>The Arch-based distro with A/B partitioning</p>
+        <h1>Install ObsidianOS</h1>
+        <p></p>
     </header>
     <main>
         <p>
-            ObsidianOS is an Arch-based Linux distro with an A/B partition style.<br>
-            If a package has a breaking change that causes some issues, you can just reboot into the second partition and restore the first one.<br>
-            All of this is done without BTRFS relying on the stability of ext4.<br>
-        </p>
-        <a href="/download.html" class="download-btn">Install</a>
+            As ObsidianOS is image-based, the installation is quite diffrent than arch.<br>
+            Premade archisos are not ready yet, so you must either:<br>
+            <ol>
+                <li><a href="https://github.com/Obsidian-OS/archiso">Create your own archisos</a>, or</li>
+                <li>Install <a href="https://github.com/Obsidian-OS/mkobsidiansfs">mkobsidiansfs</a> and <a href="https://github.com/Obsidian-OS/obsidianctl">obsidianctl</a> to install from an arch host.</li>
+            </ol>
+            Then you will need to follow the <a href="/docs/install">installation guide</a>.
+	</p>
     </main>
     <footer>
         &copy; 2025 ObsidianOS Project — <a href="/docs/" style="color:#9b59b6;">Docs</a> | <a href="https://github.com/Obsidian-OS/" style="color:#1f6feb;">GitHub</a>
