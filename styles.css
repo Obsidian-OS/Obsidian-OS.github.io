@@ -1,91 +1,191 @@
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
-        body {
-            font-family: "Cascadia Code", sans-serif;
-            margin: 0;
-            background-color: #0d1117;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        nav {
-            background-color: #000000;
-            width: 100%;
-            padding: 0.8rem 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-			gap: 2rem;
-        }
-        .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .nav-logo {
-            max-height: 40px;
-	    filter: drop-shadow(0 0 2px #ffffff);
-			margin-left: 1.5rem;
-        }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover {
-            color: #9b59b6;
-        }
-        header {
-            background: linear-gradient(to left, #1f6feb 0%,#400080 100%);
-            width: 100%;
-            padding: 2rem 1rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        .logo {
-            max-width: 120px;
-            margin-bottom: 1rem;
-            filter: drop-shadow(0 0 2px #9b59b6);
-	}
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
-        main {
-            max-width: 800px;
-            padding: 2rem 1rem;
-        }
-        .download-btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(90deg, #1f6feb, #9b59b6);
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-top: 2rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .download-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-        footer {
-            margin-top: auto;
-            padding: 1rem;
-            background-color: #161b22;
-            font-size: 0.9rem;
-            color: #aaa;
-        }
+
+:root {
+  --primary-bg: #0a0a0f;
+  --accent-blue: #1f6feb;
+  --accent-purple: #9b59b6;
+  --text-primary: #e6e8eb;
+  --text-secondary: #8b949e;
+  --shadow-dark: rgba(0,0,0,0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cascadia Code", ui-monospace, monospace;
+  margin: 0;
+  background: var(--primary-bg);
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(31, 111, 235, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(155, 89, 182, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(139, 69, 19, 0.05) 0%, transparent 50%);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100dvh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+nav {
+  background: linear-gradient(135deg, #000000 0%, #0f0f23 100%);
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 
+    0 4px 16px rgba(0,0,0,0.4),
+    0 2px 4px rgba(31, 111, 235, 0.1);
+  gap: 2rem;
+  border-bottom: 1px solid rgba(31, 111, 235, 0.2);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-logo {
+  max-height: 44px;
+  filter: 
+    drop-shadow(0 0 8px rgba(255, 255, 255, 0.3))
+    drop-shadow(0 0 16px rgba(31, 111, 235, 0.2));
+  margin-left: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  color: #f0f2f5;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-links a:hover {
+  color: var(--accent-blue);
+  border-bottom-color: var(--accent-blue);
+}
+
+header {
+  background: linear-gradient(135deg, #1a237e 0%, #4a148c 35%, #6a1b9a 70%, #1f6feb 100%);
+  background-size: 200% 200%;
+  width: 100%;
+  padding: 3rem 2rem;
+  box-shadow: 
+    0 8px 32px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+  position: relative;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%);
+  pointer-events: none;
+}
+
+.logo {
+  max-width: 140px;
+  margin-bottom: 1.5rem;
+  filter: 
+    drop-shadow(0 0 12px rgba(155, 89, 182, 0.4))
+    drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 
+    0 2px 4px rgba(0,0,0,0.5),
+    0 0 20px rgba(255,255,255,0.1);
+  letter-spacing: -0.02em;
+}
+
+header p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-weight: 400;
+  opacity: 0.9;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+main {
+  max-width: 900px;
+  padding: 3rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1f6feb 0%, #8b5cf6 50%, #9b59b6 100%);
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  margin-top: 2.5rem;
+  box-shadow: 
+    0 8px 25px rgba(31, 111, 235, 0.25),
+    0 4px 12px rgba(0,0,0,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  box-shadow: 
+    0 12px 35px rgba(31, 111, 235, 0.35),
+    0 6px 16px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+}
+
+footer {
+  margin-top: auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0f1419 0%, #161b22 100%);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  width: 100%;
+  border-top: 1px solid rgba(48, 54, 61, 0.5);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
