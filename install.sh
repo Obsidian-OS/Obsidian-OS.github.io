@@ -27,6 +27,7 @@ check_command mktemp
 # Make temporary directory
 TMPDIR="/tmp" # was something else but then obsidian-wizard would not like it
 
+rm "$TMPDIR/obsidian*" "/tmp/mkobsidiansfs" -rf||yes
 # Clone and prepare obsidian-wizard and obsidianctl
 git clone https://github.com/Obsidian-OS/obsidian-wizard "$TMPDIR/obsidian-wizard"
 git clone https://github.com/Obsidian-OS/obsidianctl "$TMPDIR/obsidianctl"
