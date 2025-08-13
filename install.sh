@@ -26,7 +26,7 @@ check_command python3
 check_command mktemp
 
 # Make temporary directory
-TMPDIR="$(mktemp -d)"
+TMPDIR="/tmp" # was something else but then obsidian-wizard would not like it
 
 # Clone and prepare obsidian-wizard and obsidianctl
 git clone https://github.com/Obsidian-OS/obsidian-wizard "$TMPDIR/obsidian-wizard"
