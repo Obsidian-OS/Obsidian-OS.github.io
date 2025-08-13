@@ -34,4 +34,5 @@ git clone https://github.com/Obsidian-OS/obsidianctl "$TMPDIR/obsidianctl"
 bash -c "cd /$TMPDIR/obsidianctl;make"
 chmod u+x "$TMPDIR/obsidian-wizard/obsidian-wizard.py"
 
-exec "$TMPDIR/obsidian-wizard/obsidian-wizard.py"
+# Run script
+"$TMPDIR/obsidian-wizard/obsidian-wizard.py"
