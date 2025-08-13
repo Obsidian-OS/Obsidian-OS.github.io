@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # install.sh - install ObsidianOS from an normal arch host
-set -e
 
 # Function to check if a command exists
 check_command() {
