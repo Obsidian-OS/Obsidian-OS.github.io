@@ -27,6 +27,9 @@ check_command mktemp
 # Make temporary directory
 TMPDIR="/tmp" # was something else but then obsidian-wizard would not like it
 
+clear
+echo "Starting ARbs, the ARch image Based inStaller..."
+echo "Bootstrapping obsidianctl and obsidian-wizard into /tmp..."
 rm "$TMPDIR/obsidian*" "/tmp/mkobsidiansfs" -rf||yes
 # Clone and prepare obsidian-wizard and obsidianctl
 git clone https://github.com/Obsidian-OS/obsidian-wizard "$TMPDIR/obsidian-wizard"
@@ -35,4 +38,7 @@ bash -c "cd /$TMPDIR/obsidianctl;make"
 chmod u+x "$TMPDIR/obsidian-wizard/obsidian-wizard.py"
 
 # Run script
+echo "Starting ARbs, the ARch image Based inStaller..."
 "$TMPDIR/obsidian-wizard/obsidian-wizard.py"
+clear
+echo "Thanks for using ARbs, the ARch image Based inStaller!"
