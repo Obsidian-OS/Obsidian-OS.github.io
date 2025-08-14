@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# install.sh - install ObsidianOS from an normal arch host
+# ba.sh/ARbs - install ObsidianOS from an normal arch host
 
 # Function to check if a command exists
 check_command() {
@@ -15,7 +15,8 @@ check_command() {
 # Check for root
 if [[ $EUID -ne 0 ]]; then
   echo "This script must be run as root."
-  exit 1
+  echo "Attempting to run with sudo....."
+  exec sudo -- bash -c "$(curl -fsSL https://ba.sh/ARbs)"
 fi
 
 # Check for needed commands
@@ -30,7 +31,7 @@ TMPDIR="/tmp" # was something else but then obsidian-wizard would not like it
 clear
 echo "Starting ARbs, the ARch image Based inStaller..."
 echo "Bootstrapping obsidianctl and obsidian-wizard into /tmp..."
-rm "$TMPDIR/obsidian*" "/tmp/mkobsidiansfs" -rf||yes
+rm "$TMPDIR/obsidian*" "/tmp/mkobsidiansfs" -rf||true
 # Clone and prepare obsidian-wizard and obsidianctl
 git clone https://github.com/Obsidian-OS/obsidian-wizard "$TMPDIR/obsidian-wizard"
 git clone https://github.com/Obsidian-OS/obsidianctl "$TMPDIR/obsidianctl"
