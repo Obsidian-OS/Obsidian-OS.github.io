@@ -40,6 +40,6 @@ chmod u+x "$TMPDIR/obsidian-wizard/obsidian-wizard.py"
 
 # Run script
 echo "Starting ARbs, the ARch image Based inStaller..."
-"$TMPDIR/obsidian-wizard/obsidian-wizard.py"
+"$TMPDIR/obsidian-wizard/obsidian-wizard.py" "$0" # $0 is used when you do bash -c "echo stuff" foo then foo will be $0
 clear
 echo "Thanks for using ARbs, the ARch image Based inStaller!"
