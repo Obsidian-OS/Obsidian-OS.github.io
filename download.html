@@ -5,41 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ObsidianOS Installation</title>
     <link rel="stylesheet" href="styles.css">
-	<link rel="icon" href="/icon.png" type="image/png" />
+    <link rel="icon" href="/logo.png" type="image/png">
 </head>
 <body>
+    <div class="background-container"></div>
+    <div class="mouse-follower mouse-follower-1"></div>
+    <div class="mouse-follower mouse-follower-2"></div>
+    <div class="mouse-follower mouse-follower-3"></div>
     <nav>
-        <div class="nav-left">
-            <img src="logo.png" alt="ObsidianOS Logo" class="nav-logo">
+        <div class="nav-container">
+            <div class="nav-left">
+                <img src="logo.png" alt="ObsidianOS Logo" class="nav-logo">
+                <a href="/" class="nav-title">ObsidianOS</a>
+            </div>
             <div class="nav-links">
-                <a href="/">Home</a>
-                <b><a href="/download.html">Install</a></b>
+                <a href="/download.html">Install</a>
                 <a href="/docs/">Docs</a>
-                <a href="https://github.com/Obsidian-OS/">GitHub</a>
-                <a href="https://www.reddit.com/r/obsidian_OS/">Reddit</a>
-				<a href="https://discord.gg/AsYgAzSZ">Discord</a>
+                <a href="https://github.com/Obsidian-OS/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.reddit.com/r/obsidian_OS/" target="_blank" rel="noopener noreferrer">Reddit</a>
+                <a href="https://discord.gg/AsYgAzSZ" target="_blank" rel="noopener noreferrer">Discord</a>
             </div>
         </div>
     </nav>
-    <header>
-        <img src="logo.png" alt="ObsidianOS Logo" class="logo">
-        <h1>Install ObsidianOS</h1>
-        <p></p>
-    </header>
     <main>
-        <p>
-            As ObsidianOS is image-based, the installation is quite diffrent than Arch.<br>
-            <ol>
-                <li><a href="https://github.com/Obsidian-OS/archiso">Create your own ISO</a> or get one from the button below</li>
-                <li>Install <a href="https://github.com/Obsidian-OS/mkobsidiansfs">mkobsidiansfs</a> and <a href="https://github.com/Obsidian-OS/obsidianctl">obsidianctl</a> to install ObsidianOS on a disk from an Arch host.</li>
-				<li><b>NEW!</b> From an existing arch host, run <pre><code>sudo bash -c "$(curl -fsSL https://arbs.obsidianos.xyz)"</code></pre></li>
-            </ol>
-            Then you will need to follow the <a href="/docs/install">installation guide</a>.
-	</p>
-		 <a href="https://sourceforge.net/projects/obsidianos/files/latest/download" class="download-btn">Download prebuilt ISOs</a>
+        <header>
+            <h1 class="main-title">Install ObsidianOS</h1>
+            <p class="subtitle">Get up and running with the future of Arch Linux.</p>
+        </header>
+        <section class="install-options">
+            <div class="install-card">
+                <h2>Option 1: Pre-built ISO</h2>
+                <p>The easiest way to get started. Download a pre-built ISO and follow our installation guide.</p>
+                <a href="https://sourceforge.net/projects/obsidianos/files/latest/download" class="download-btn">Download ISO</a>
+            </div>
+            <div class="install-card">
+                <h2>Option 2: Build Your Own</h2>
+                <p>For advanced users who want to customize their installation. Create your own ISO from scratch.</p>
+                <a href="https://github.com/Obsidian-OS/archiso" class="download-btn">Build from Source</a>
+            </div>
+            <div class="install-card">
+                <h2>Option 3: Arch-based Installer</h2>
+                <p>Install ObsidianOS directly from an existing Arch Linux system using our installer script.</p>
+                <pre><code>sudo bash -c "$(curl -fsSL https://arbs.obsidianos.xyz)"</code></pre>
+            </div>
+        </section>
+        <section class="post-install">
+            <h2>Next Steps</h2>
+            <p>After installation, be sure to check out our comprehensive documentation for configuration and usage guides.</p>
+            <a href="/docs/install" class="download-btn">Installation Guide</a>
+        </section>
+        <section class="community">
+            <h2>Join the Community</h2>
+            <p>Have questions or want to connect with other users? Join our community on Reddit or Discord.</p>
+            <div class="community-links">
+                <a href="https://www.reddit.com/r/obsidian_OS/" target="_blank" rel="noopener noreferrer" class="community-link">Reddit</a>
+                <a href="https://discord.gg/AsYgAzSZ" target="_blank" rel="noopener noreferrer" class="community-link">Discord</a>
+            </div>
+        </section>
     </main>
     <footer>
-        &copy; 2025 ObsidianOS Project — <a href="/docs/" style="color:#9b59b6;">Docs</a> | <a href="https://github.com/Obsidian-OS/" style="color:#1f6feb;">GitHub</a>
+        <p>&copy; 2025 ObsidianOS Project</p>
+        <div class="footer-links">
+            <a href="/docs/">Docs</a>
+            <a href="https://github.com/Obsidian-OS/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
     </footer>
+    <script>
+        const followers = document.querySelectorAll('.mouse-follower');
+        document.addEventListener('mousemove', (e) => {
+            followers.forEach((follower, index) => {
+                setTimeout(() => {
+                    follower.style.left = e.pageX + 'px';
+                    follower.style.top = e.pageY + 'px';
+                }, index * 100);
+            });
+        });
+    </script>
 </body>
 </html>

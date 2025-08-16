@@ -5,37 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ObsidianOS</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="/logo.png" type="image/png" />
+    <link rel="icon" href="/logo.png" type="image/png">
 </head>
 <body>
+    <div class="background-container"></div>
+    <div class="mouse-follower mouse-follower-1"></div>
+    <div class="mouse-follower mouse-follower-2"></div>
+    <div class="mouse-follower mouse-follower-3"></div>
     <nav>
-        <div class="nav-left">
-            <img src="logo.png" alt="ObsidianOS Logo" class="nav-logo">
+        <div class="nav-container">
+            <div class="nav-left">
+                <img src="logo.png" alt="ObsidianOS Logo" class="nav-logo">
+                <a href="/" class="nav-title">ObsidianOS</a>
+            </div>
             <div class="nav-links">
-                <b><a href="/">Home</a></b>
-                <a href="/download.html">Install</a>
+                <a href="/download">Install</a>
                 <a href="/docs/">Docs</a>
-                <a href="https://github.com/Obsidian-OS/">GitHub</a>
-                <a href="https://www.reddit.com/r/obsidian_OS/">Reddit</a>
-                <a href="https://discord.gg/AsYgAzSZ">Discord</a>
+                <a href="https://github.com/Obsidian-OS/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.reddit.com/r/obsidian_OS/" target="_blank" rel="noopener noreferrer">Reddit</a>
+                <a href="https://discord.gg/AsYgAzSZ" target="_blank" rel="noopener noreferrer">Discord</a>
             </div>
         </div>
     </nav>
-    <header>
-        <img src="logo.png" alt="ObsidianOS Logo" class="logo">
-        <h1>ObsidianOS</h1>
-        <p>The Arch-based distro with A/B partitioning</p>
-    </header>
     <main>
-        <p>
-            ObsidianOS is an Arch-based GNU/Linux distro with an A/B partition style.<br>
-            If a package has a breaking change that causes some issues, you can just reboot into the second partition and restore the first one.<br>
-            All of this is done without BTRFS relying on the stability of ext4.<br>
-        </p>
-        <a href="/download.html" class="download-btn">Install</a>
+        <header>
+            <img src="logo.png" alt="ObsidianOS Logo" class="logo">
+            <h1 class="main-title">ObsidianOS</h1>
+            <p class="subtitle">The Arch-based distro with A/B partitioning</p>
+        </header>
+        <section class="features">
+            <div class="feature-card">
+                <h2>A/B Partitioning</h2>
+                <p>With A/B partitioning, updates are atomic. If an update fails, you can simply reboot into the previous partition, ensuring your system is always bootable.</p>
+            </div>
+            <div class="feature-card">
+                <h2>Arch-Based</h2>
+                <p>Enjoy the power and flexibility of Arch Linux, with access to the latest software and a massive repository of packages through the AUR.</p>
+            </div>
+            <div class="feature-card">
+                <h2>Stable and Reliable</h2>
+                <p>Built on the stability of ext4, ObsidianOS provides a reliable computing experience without the complexities of other filesystems.</p>
+            </div>
+        </section>
+        <a href="/download.html" class="download-btn">Install Now</a>
+        <section class="community">
+            <h2>Join the Community</h2>
+            <p>Have questions or want to connect with other users? Join our community on Reddit or Discord.</p>
+            <div class="community-links">
+                <a href="https://www.reddit.com/r/obsidian_OS/" target="_blank" rel="noopener noreferrer" class="community-link">Reddit</a>
+                <a href="https://discord.gg/AsYgAzSZ" target="_blank" rel="noopener noreferrer" class="community-link">Discord</a>
+            </div>
+        </section>
     </main>
     <footer>
-        &copy; 2025 ObsidianOS Project — <a href="/docs/" style="color:#9b59b6;">Docs</a> | <a href="https://github.com/Obsidian-OS/" style="color:#1f6feb;">GitHub</a>
+        <p>&copy; 2025 ObsidianOS Project</p>
+        <div class="footer-links">
+            <a href="/docs/">Docs</a>
+            <a href="https://github.com/Obsidian-OS/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
     </footer>
+    <script>
+        const followers = document.querySelectorAll('.mouse-follower');
+        document.addEventListener('mousemove', (e) => {
+            followers.forEach((follower, index) => {
+                setTimeout(() => {
+                    follower.style.left = e.pageX + 'px';
+                    follower.style.top = e.pageY + 'px';
+                }, index * 100);
+            });
+        });
+    </script>
 </body>
 </html>
