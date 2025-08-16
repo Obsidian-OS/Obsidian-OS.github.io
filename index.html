@@ -9,6 +9,9 @@
 </head>
 <body>
     <div class="background-container"></div>
+    <div class="mouse-follower mouse-follower-1"></div>
+    <div class="mouse-follower mouse-follower-2"></div>
+    <div class="mouse-follower mouse-follower-3"></div>
     <nav>
         <div class="nav-container">
             <div class="nav-left">
@@ -16,7 +19,7 @@
                 <a href="/" class="nav-title">ObsidianOS</a>
             </div>
             <div class="nav-links">
-                <a href="/download.html">Install</a>
+                <a href="/download">Install</a>
                 <a href="/docs/">Docs</a>
                 <a href="https://github.com/Obsidian-OS/" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="https://www.reddit.com/r/obsidian_OS/" target="_blank" rel="noopener noreferrer">Reddit</a>
@@ -32,7 +35,7 @@
         </header>
         <section class="features">
             <div class="feature-card">
-                <h2>Atomic Updates</h2>
+                <h2>A/B Partitioning</h2>
                 <p>With A/B partitioning, updates are atomic. If an update fails, you can simply reboot into the previous partition, ensuring your system is always bootable.</p>
             </div>
             <div class="feature-card">
@@ -53,5 +56,16 @@
             <a href="https://github.com/Obsidian-OS/" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
     </footer>
+    <script>
+        const followers = document.querySelectorAll('.mouse-follower');
+        document.addEventListener('mousemove', (e) => {
+            followers.forEach((follower, index) => {
+                setTimeout(() => {
+                    follower.style.left = e.pageX + 'px';
+                    follower.style.top = e.pageY + 'px';
+                }, index * 100);
+            });
+        });
+    </script>
 </body>
 </html>

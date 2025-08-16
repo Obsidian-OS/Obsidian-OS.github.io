@@ -23,6 +23,7 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 .background-container {
@@ -32,18 +33,38 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: radial-gradient(circle at 15% 50%, rgba(31, 111, 235, 0.15) 0%, transparent 30%),
-        radial-gradient(circle at 85% 30%, rgba(155, 89, 182, 0.15) 0%, transparent 30%);
-    animation: background-pan 20s linear infinite;
 }
 
-@keyframes background-pan {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
+.mouse-follower {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: -1;
+    transition: all 0.2s ease-out;
+}
+
+.mouse-follower-1 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(31, 111, 235, 0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+}
+
+.mouse-follower-2 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(155, 89, 182, 0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition-delay: 0.1s;
+}
+
+.mouse-follower-3 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition-delay: 0.2s;
 }
 
 nav {
@@ -120,10 +141,24 @@ header {
     font-size: 4rem;
     font-weight: 700;
     letter-spacing: -0.05em;
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-blue));
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
+    animation: gradient-animation 4s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .subtitle {
@@ -157,16 +192,15 @@ header {
     font-size: 1.2rem;
     font-weight: 600;
     color: #fff;
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple), var(--accent-blue));
     background-size: 200% 200%;
     border: none;
     border-radius: 8px;
     text-decoration: none;
-    transition: background-position 0.5s ease;
 }
 
 .download-btn:hover {
-    background-position: 100% 100%;
+    animation: gradient-animation 4s ease infinite;
 }
 
 footer {
