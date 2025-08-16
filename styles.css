@@ -146,7 +146,7 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
-    animation: gradient-animation 4s ease infinite;
+    animation: gradient-animation 2s ease infinite;
 }
 
 @keyframes gradient-animation {
