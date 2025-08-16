@@ -265,8 +265,9 @@ pre {
 }
 
 .download-btn {
-    display: inline-block;
+    display: block;
     padding: 1rem 2.5rem;
+    margin-bottom: 1rem;
     font-size: 1.2rem;
     font-weight: 600;
     color: #fff;
@@ -276,11 +277,14 @@ pre {
     border-radius: 8px;
     text-decoration: none;
     transition: transform 0.3s ease;
-    margin-bottom: 10px;
 }
 
 .download-btn:hover {
-    animation: gradient-animation 4s ease infinite;
+    animation: gradient-animation 2s ease infinite;
+}
+
+.download-btn:last-child {
+    margin-bottom: 0;
 }
 
 footer {
