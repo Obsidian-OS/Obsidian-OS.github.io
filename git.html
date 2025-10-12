@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ObsidianOS</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>ObsidianOS Git</title>
+    <link rel="stylesheet" href="https://obsidianos.xyz/styles.css">
     <link rel="icon" href="/logo.svg" type="image/svg+xml">
 </head>
 <body>
@@ -30,46 +30,11 @@
     <main>
         <header>
             <img src="logo.svg" alt="ObsidianOS Logo" class="logo">
-            <h1 class="main-title">ObsidianOS</h1>
-            <p class="subtitle">The GNU/Linux distribution with A/B Partitioning.</p>
+            <h1 class="main-title">Git</h1>
+            <p class="subtitle">Free and Open Source Software!</p>
         </header>
         <section class="features">
-            <div class="feature-card">
-                <h2>A/B Partitioning</h2>
-                <p>With A/B partitioning, updates are atomic. If an update fails, you can simply reboot into the previous partition, ensuring your system is always bootable.</p>
-            </div>
-            <div class="feature-card">
-                <h2>Multiple bases</h2>
-                <p>Enjoy the power and flexibility of Arch, Gentoo, or even Void, with the power of A/B Partitioning</p>
-            </div>
-            <div class="feature-card">
-                <h2>Stable and Reliable</h2>
-                <p>Built on the stability of ext4, ObsidianOS provides a reliable computing experience without the complexities of other filesystems.</p>
-            </div>
-        </section>
-        <section class="wallpaper-contest-winners">
-            <h2>Monthly Wallpaper Contest Winners!</h2>
-            <br>  <!-- a very very cheap way of spacing, lmao -->
-            <div class="desktop-screenshots">
-                <div class="laptop-box">
-                    <a href="/contest-kde.png" title="Download Wallpaper" target="_blank"><div class="floating-logo floating-logo-left">
-                        <img src="https://develop.kde.org/img/kde-logo-white-blue-rounded-source.svg" alt="KDE" />
-                    </div></a>
-                    <div class="screen">
-                        <img src="/contest-kde.png" alt="KDE Wallpaper Winner" />
-                    </div>
-                    <div class="base"><a href="https://github.com/s-ar2005">@s-ar2005</a></div>
-                </div>
-                <div class="laptop-box">
-                    <a href="https://drive.google.com/drive/folders/1FGrwNvKXKa4-2lDfE7-9xbWimQ4hPiAW" title="Download Wallpaper (multiple variants and resolutions)" target="_blank"><div class="floating-logo floating-logo-right">
-                        <img src="https://cdn11.bigcommerce.com/s-pywjnxrcr2/images/stencil/original/image-manager/znbla5m069vx10kz-cosmic-sectiontutorial-orange.png" alt="COSMIC" />
-                    </div></a>
-                    <div class="screen">
-                        <img src="/contest-cosmic.png" alt="COSMIC Wallpaper Winner" />
-                    </div>
-                    <div class="base"><a href="https://github.com/D4yvid">@d4yvid</a></div>
-                </div>
-            </div>
+            <div id="repo-list"></div>
         </section>
         <section class="community">
             <h2>Join the Community</h2>
@@ -97,8 +62,7 @@
                 }, index * 100);
             });
         });
-
-        function openurl(url) { window.open(url, "_blank"); }
     </script>
+    <script src="/git.js"></script>
 </body>
 </html>
