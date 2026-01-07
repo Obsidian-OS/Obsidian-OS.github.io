@@ -174,7 +174,6 @@ main {
     width: 220px;
     height: 220px;
     opacity: 0;
-    transition: opacity 0.3s ease;
     background-color: transparent;
     mix-blend-mode: lighten;
     object-fit: contain;
@@ -200,7 +199,7 @@ main {
     font-size: 1.3rem;
     color: var(--text-secondary);
     line-height: 1.5;
-    font-weight: 400;
+    margin-bottom: 2rem;
 }
 
 .feature-section,
