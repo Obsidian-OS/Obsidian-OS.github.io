@@ -526,6 +526,108 @@ pre {
     z-index: 1;
 }
 
+.featured-on {
+    margin: 6rem calc(-50vw + 50%);
+    background: linear-gradient(135deg, #2d1b69 0%, #0f0f23 100%);
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-on h2 {
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.5rem;
+    color: var(--text-primary);
+    font-weight: 700;
+    z-index: 2;
+}
+
+.featured-on .desktop-screenshots {
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.featured-on::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(53, 132, 228, 0.15) 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(155, 89, 182, 0.15) 0%,
+            transparent 50%
+        );
+    z-index: 1;
+}
+
+.wallpaper-contest-winners {
+    margin: 6rem calc(-50vw + 50%);
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: linear-gradient(135deg, #0a1929 0%, #1a2332 100%);
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wallpaper-contest-winners h2 {
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.5rem;
+    color: var(--text-primary);
+    font-weight: 700;
+    z-index: 2;
+}
+
+.wallpaper-contest-winners .desktop-screenshots {
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.wallpaper-contest-winners::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(53, 132, 228, 0.15) 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(155, 89, 182, 0.15) 0%,
+            transparent 50%
+        );
+    z-index: 1;
+}
+
 .download-btn {
     display: inline-block;
     padding: 1rem 2.5rem;
