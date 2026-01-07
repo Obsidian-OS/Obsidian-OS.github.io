@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 :root {
     --primary-bg: #242424;
@@ -26,7 +26,7 @@ a:visited {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     background-color: var(--primary-bg);
     color: var(--text-primary);
     line-height: 1.6;
@@ -43,8 +43,6 @@ body {
     height: 100%;
     z-index: -1;
 }
-
-
 
 nav {
     width: 100%;
@@ -105,32 +103,75 @@ main {
 }
 
 .hero-section {
-    text-align: center;
     margin-bottom: 6rem;
+    padding: 2rem 0;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 220px;
 }
 
 .hero-logo {
-    width: 120px;
-    margin-bottom: 1.5rem;
-    filter: drop-shadow(0 0 20px rgba(155, 89, 182, 0.5));
+    width: 180px;
+    position: absolute;
+}
+
+.hero-logo-container:hover .hero-logo {
+    opacity: 0;
+}
+
+.hero-logo-gif {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: transparent;
+    mix-blend-mode: lighten;
+    object-fit: contain;
+}
+
+.hero-logo-container:hover .hero-logo-gif {
+    opacity: 1;
+}
+
+.hero-text {
+    padding-left: 2rem;
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    letter-spacing: -0.05em;
-    color: var(--accent-blue);
+    color: var(--text-primary);
     margin-bottom: 1rem;
+    line-height: 1.1;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--text-secondary);
+    line-height: 1.5;
+    font-weight: 400;
 }
 
 .feature-section,
@@ -180,8 +221,6 @@ header {
     margin-bottom: 1rem;
 }
 
-
-
 .subtitle {
     font-size: 1.5rem;
     color: var(--text-secondary);
@@ -189,8 +228,8 @@ header {
 
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
     margin-bottom: 4rem;
 }
 
@@ -206,7 +245,9 @@ header {
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .install-card:hover {
@@ -264,7 +305,9 @@ pre {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 .community-link:hover {
@@ -274,15 +317,22 @@ pre {
 
 .feature-card {
     background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 12px;
+    padding: 2.5rem;
+    border-radius: 16px;
     border: 1px solid var(--border-color);
 }
 
 .feature-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
-    color: var(--accent-blue);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
 .download-btn {
@@ -377,8 +427,9 @@ footer {
     position: relative;
     width: 100%;
     height: 240px;
-    border-radius: 12px;
+    border-radius: 12px 12px 0 0;
     border: 1px solid var(--border-color);
+    border-bottom: none;
     overflow: hidden;
     background: var(--card-bg);
 }
@@ -405,7 +456,8 @@ footer {
 }
 
 @keyframes float-left {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0) rotate(calc(var(--rotation) - 5deg));
     }
     50% {
@@ -414,7 +466,8 @@ footer {
 }
 
 @keyframes float-right {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0) rotate(calc(var(--rotation) + 5deg));
     }
     50% {
@@ -431,7 +484,7 @@ footer {
 .screen img {
     width: 100%;
     height: 100%;
-    border-radius: 12px 12px 0 0;
+    border-radius: 11px 11px 0 0;
     object-fit: cover;
     display: block;
 }
