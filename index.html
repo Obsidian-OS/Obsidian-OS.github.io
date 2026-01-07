@@ -8,10 +8,7 @@
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />
     </head>
     <body>
-        <div class="background-container"></div>
-        <div class="mouse-follower mouse-follower-1"></div>
-        <div class="mouse-follower mouse-follower-2"></div>
-        <div class="mouse-follower mouse-follower-3"></div>
+        
         <nav>
             <div class="nav-container">
                 <div class="nav-left">
@@ -217,16 +214,6 @@
             </div>
         </footer>
         <script>
-            const followers = document.querySelectorAll(".mouse-follower");
-            document.addEventListener("mousemove", (e) => {
-                followers.forEach((follower, index) => {
-                    setTimeout(() => {
-                        follower.style.left = e.pageX + "px";
-                        follower.style.top = e.pageY + "px";
-                    }, index * 100);
-                });
-            });
-
             function openurl(url) {
                 window.open(url, "_blank");
             }
