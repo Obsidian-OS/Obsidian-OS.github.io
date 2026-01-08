@@ -1,5 +1,14 @@
 <!doctype html>
 <html lang="en">
+    <!--
+    oh wow you're reading the source code, lol
+    if you're not reading this file locally
+    and instead reading from devtools, this
+    website's source code is on github.
+    https://git.obsidianos.xyz/Obsidian-OS.github.io
+
+    - neo
+    -->
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,10 +17,6 @@
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />
     </head>
     <body>
-        <div class="background-container"></div>
-        <div class="mouse-follower mouse-follower-1"></div>
-        <div class="mouse-follower mouse-follower-2"></div>
-        <div class="mouse-follower mouse-follower-3"></div>
         <nav>
             <div class="nav-container">
                 <div class="nav-left">
@@ -46,27 +51,42 @@
             </div>
         </nav>
         <main>
-            <header>
-                <img src="logo.svg" alt="ObsidianOS Logo" class="logo" />
-                <h1 class="main-title">ObsidianOS</h1>
-                <p class="subtitle">
-                    The GNU/Linux distribution with A/B Partitioning.
-                </p>
+            <header class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-logo-container">
+                        <img
+                            src="logo.svg"
+                            alt="ObsidianOS Logo"
+                            class="hero-logo"
+                        />
+                        <img
+                            src="https://files.obsidianos.xyz/oboslogo-gif-dark.gif"
+                            alt="ObsidianOS Animated Logo"
+                            class="hero-logo-gif"
+                        />
+                    </div>
+                    <div class="hero-text">
+                        <h1 class="main-title">ObsidianOS</h1>
+                        <p class="subtitle">
+                            The GNU/Linux distribution with A/B Partitioning.
+                        </p>
+                    </div>
+                </div>
             </header>
             <section class="features">
                 <div class="feature-card">
                     <h2>A/B Partitioning</h2>
                     <p>
-                        With A/B partitioning, updates are atomic. If an update
-                        fails, you can simply reboot into the previous
+                        With A/B partitioning, updates are atomic (optional). If
+                        an update fails, you can simply reboot into the previous
                         partition, ensuring your system is always bootable.
                     </p>
                 </div>
                 <div class="feature-card">
                     <h2>Multiple bases</h2>
                     <p>
-                        Enjoy the power and flexibility of Arch, Gentoo, or even
-                        Void, with the power of A/B Partitioning
+                        Enjoy the power and flexibility of Arch, Debian, Gentoo,
+                        or even Void, with the power of A/B Partitioning
                     </p>
                 </div>
                 <div class="feature-card">
@@ -78,9 +98,70 @@
                     </p>
                 </div>
             </section>
+            <section class="base-section">
+                <div class="base-content">
+                    <div class="base-text">
+                        <h2>Choose your own base</h2>
+                        <p>
+                            Whether you like Arch, Debian, Gentoo or even Void,
+                            there's an ObsidianOS Edition of it!
+                        </p>
+                    </div>
+                    <div class="base-images">
+                        <img
+                            src="https://github.com/archlinux.png"
+                            class="base-img base-img-1"
+                            alt="Arch Linux"
+                        />
+                        <img
+                            src="https://github.com/gentoo.png"
+                            class="base-img base-img-2"
+                            alt="Gentoo"
+                        />
+                        <img
+                            src="https://github.com/void-linux.png"
+                            class="base-img base-img-3"
+                            alt="Void"
+                        />
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Openlogo-debianV2.svg/960px-Openlogo-debianV2.svg.png"
+                            class="base-img base-img-4"
+                            alt="Debian"
+                        />
+                    </div>
+                </div>
+            </section>
+            <section class="mutable-section">
+                <div class="mutable-content">
+                    <div class="mutable-text">
+                        <h2>No enforced immutability</h2>
+                        <p>
+                            Yes! Immutability is completely optional, and even
+                            atomicity! you can enjoy A/B partitions while being
+                            on the bleeding edge!
+                        </p>
+                    </div>
+                    <div class="mutable-images">
+                        <img
+                            src="https://raw.githubusercontent.com/KDE/breeze-icons/refs/heads/master/icons/devices/64/drive-harddisk.svg"
+                            class="mutable-img mutable-img-1"
+                            alt="H"
+                        />
+                        <img
+                            src="https://raw.githubusercontent.com/KDE/breeze-icons/refs/heads/master/icons/emblems/22/emblem-unlocked.svg"
+                            class="mutable-img mutable-img-3"
+                            alt="Mutable"
+                        />
+                    </div>
+                </div>
+            </section>
+            <section class="apps-section">
+                <div class="apps-content">
+                    <h2>Access a major list of apps, no compromise.</h2>
+                </div>
+            </section>
             <section class="featured-on">
-                <h2>As featured on:</h2>
-                <br />
+                <h2>As featured on</h2>
                 <div class="desktop-screenshots">
                     <div class="laptop-box">
                         <a
@@ -133,12 +214,11 @@
             </section>
             <section class="wallpaper-contest-winners">
                 <h2>Monthly Wallpaper Contest Winners!</h2>
-                <br />
-                <!-- a very very cheap way of spacing, lmao -->
+                <h5>December 2025, Join contest on Discord.</h5>
                 <div class="desktop-screenshots">
                     <div class="laptop-box">
                         <a
-                            href="/contest-kde.png"
+                            href="/assets/contest-kde.png"
                             title="Download Wallpaper"
                             target="_blank"
                             ><div class="floating-logo floating-logo-left">
@@ -149,17 +229,19 @@
                         ></a>
                         <div class="screen">
                             <img
-                                src="/contest-kde.png"
+                                src="/assets/contest-kde.png"
                                 alt="KDE Wallpaper Winner"
                             />
                         </div>
                         <div class="base">
-                            <a href="https://github.com/mostypc123">@mostypc123</a>
+                            <a href="https://github.com/mostypc123"
+                                >@mostypc123</a
+                            >
                         </div>
                     </div>
                     <div class="laptop-box">
                         <a
-                            href="/contest-kde.png"
+                            href="/assets/contest-kde.png"
                             title="Download Wallpaper"
                             target="_blank"
                             ><div class="floating-logo floating-logo-right">
@@ -170,7 +252,7 @@
                         ></a>
                         <div class="screen">
                             <img
-                                src="/contest-cosmic.png"
+                                src="/assets/contest-cosmic.png"
                                 alt="COSMIC Wallpaper Winner"
                             />
                         </div>
@@ -205,28 +287,27 @@
             </section>
         </main>
         <footer>
-            <p>&copy; 2026 ObsidianOS Project</p>
-            <div class="footer-links">
-                <a href="https://wiki.obsidianos.xyz/">Wiki</a>
-                <a
-                    href="https://github.com/Obsidian-OS/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >GitHub</a
-                >
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p class="footer-copyright">
+                        &copy; 2026 ObsidianOS Project
+                    </p>
+                    <p class="footer-tagline">
+                        The GNU/Linux distribution with A/B Partitioning
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://wiki.obsidianos.xyz/">Wiki</a>
+                    <a
+                        href="https://github.com/Obsidian-OS/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >GitHub</a
+                    >
+                </div>
             </div>
         </footer>
         <script>
-            const followers = document.querySelectorAll(".mouse-follower");
-            document.addEventListener("mousemove", (e) => {
-                followers.forEach((follower, index) => {
-                    setTimeout(() => {
-                        follower.style.left = e.pageX + "px";
-                        follower.style.top = e.pageY + "px";
-                    }, index * 100);
-                });
-            });
-
             function openurl(url) {
                 window.open(url, "_blank");
             }
