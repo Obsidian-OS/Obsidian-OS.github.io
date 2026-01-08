@@ -491,7 +491,7 @@ pre {
 .apps-section {
     position: relative;
     overflow: hidden;
-    height: 80vh;
+    height: 100vh;
     min-height: 600px;
     margin: 6rem calc(-50vw + 50%);
     margin-left: -50vw;
