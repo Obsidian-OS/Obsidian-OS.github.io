@@ -1,0 +1,3 @@
+[submodule "wikifallback"]
+	path = wikifallback
+	url = https://github.com/Markdownium/Markdownium
