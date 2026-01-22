@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-    <!--
+<!--
     oh wow you're reading the source code, lol
     if you're not reading this file locally
     and instead reading from devtools, this
@@ -9,308 +9,231 @@
 
     - neo
     -->
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ObsidianOS</title>
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
-    </head>
-    <body>
-        <nav>
-            <div class="nav-container">
-                <div class="nav-left">
-                    <img
-                        src="logo.svg"
-                        alt="ObsidianOS Logo"
-                        class="nav-logo"
-                    />
-                    <a href="/" class="nav-title">ObsidianOS</a>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ObsidianOS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-left">
+                <img src="logo.svg" alt="ObsidianOS Logo" class="nav-logo" />
+                <a href="/" class="nav-title">ObsidianOS</a>
+            </div>
+            <div class="nav-links">
+                <a href="https://files.obsidianos.xyz/">Downloads</a>
+                <a href="https://wiki.obsidianos.xyz/">Wiki</a>
+                <a href="https://obsidianos.xyz/git" rel="noopener noreferrer">Git</a>
+                <a href="https://www.reddit.com/r/obsidian_OS/" target="_blank" rel="noopener noreferrer">Reddit</a>
+                <a href="https://dsc.gg/obsidianos" target="_blank" rel="noopener noreferrer">Discord</a>
+            </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <header class="hero-section">
+            <div class="hero-content">
+                <div class="hero-logo-container">
+                    <img src="logo.svg" alt="ObsidianOS Logo" class="hero-logo" />
+                    <img src="https://files.obsidianos.xyz/oboslogo-gif-dark.gif" alt="ObsidianOS Animated Logo"
+                        class="hero-logo-gif" />
                 </div>
-                <div class="nav-links">
-                    <a href="https://files.obsidianos.xyz/">Downloads</a>
-                    <a href="https://wiki.obsidianos.xyz/">Wiki</a>
-                    <a
-                        href="https://obsidianos.xyz/git"
-                        rel="noopener noreferrer"
-                        >Git</a
-                    >
-                    <a
-                        href="https://www.reddit.com/r/obsidian_OS/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Reddit</a
-                    >
-                    <a
-                        href="https://dsc.gg/obsidianos"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Discord</a
-                    >
+                <div class="hero-text">
+                    <h1 class="main-title">ObsidianOS</h1>
+                    <p class="subtitle">
+                        The GNU/Linux distribution with A/B Partitioning.
+                    </p>
                 </div>
             </div>
-        </nav>
-        <main>
-            <header class="hero-section">
-                <div class="hero-content">
-                    <div class="hero-logo-container">
-                        <img
-                            src="logo.svg"
-                            alt="ObsidianOS Logo"
-                            class="hero-logo"
-                        />
-                        <img
-                            src="https://files.obsidianos.xyz/oboslogo-gif-dark.gif"
-                            alt="ObsidianOS Animated Logo"
-                            class="hero-logo-gif"
-                        />
-                    </div>
-                    <div class="hero-text">
-                        <h1 class="main-title">ObsidianOS</h1>
-                        <p class="subtitle">
-                            The GNU/Linux distribution with A/B Partitioning.
-                        </p>
-                    </div>
-                </div>
-            </header>
-            <section class="features">
-                <div class="feature-card">
-                    <h2>A/B Partitioning</h2>
-                    <p>
-                        With A/B partitioning, updates are atomic (optional). If
-                        an update fails, you can simply reboot into the previous
-                        partition, ensuring your system is always bootable.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <h2>Multiple bases</h2>
-                    <p>
-                        Enjoy the power and flexibility of Arch, Debian, Gentoo,
-                        or even Void, with the power of A/B Partitioning
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <h2>Stable and Reliable</h2>
-                    <p>
-                        Built on the stability of ext4, ObsidianOS provides a
-                        reliable computing experience without the complexities
-                        of other filesystems.
-                    </p>
-                </div>
-            </section>
-            <section class="base-section">
-                <div class="base-content">
-                    <div class="base-text">
-                        <h2>Choose your own base</h2>
-                        <p>
-                            Whether you like Arch, Debian, Gentoo or even Void,
-                            there's an ObsidianOS Edition of it!
-                        </p>
-                    </div>
-                    <div class="base-images">
-                        <img
-                            src="https://github.com/archlinux.png"
-                            class="base-img base-img-1"
-                            alt="Arch Linux"
-                        />
-                        <img
-                            src="https://github.com/gentoo.png"
-                            class="base-img base-img-2"
-                            alt="Gentoo"
-                        />
-                        <img
-                            src="https://github.com/void-linux.png"
-                            class="base-img base-img-3"
-                            alt="Void"
-                        />
-                        <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Openlogo-debianV2.svg/960px-Openlogo-debianV2.svg.png"
-                            class="base-img base-img-4"
-                            alt="Debian"
-                        />
-                    </div>
-                </div>
-            </section>
-            <section class="mutable-section">
-                <div class="mutable-content">
-                    <div class="mutable-text">
-                        <h2>No enforced immutability</h2>
-                        <p>
-                            Yes! Immutability is completely optional, and even
-                            atomicity! you can enjoy A/B partitions while being
-                            on the bleeding edge!
-                        </p>
-                    </div>
-                    <div class="mutable-images">
-                        <img
-                            src="https://raw.githubusercontent.com/KDE/breeze-icons/refs/heads/master/icons/devices/64/drive-harddisk.svg"
-                            class="mutable-img mutable-img-1"
-                            alt="H"
-                        />
-                        <img
-                            src="https://raw.githubusercontent.com/KDE/breeze-icons/refs/heads/master/icons/emblems/22/emblem-unlocked.svg"
-                            class="mutable-img mutable-img-3"
-                            alt="Mutable"
-                        />
-                    </div>
-                </div>
-            </section>
-            <section class="apps-section">
-                <div class="apps-content">
-                    <h2>Access a major list of apps, no compromise.</h2>
-                </div>
-            </section>
-            <section class="featured-on">
-                <h2>As featured on</h2>
-                <div class="desktop-screenshots">
-                    <div class="laptop-box">
-                        <a
-                            href="https://itsfoss.com/obsidianos-review"
-                            title="Distro Of The Month 2025 - It's FOSS"
-                            target="_blank"
-                            ><div class="floating-logo floating-logo-left">
-                                <img
-                                    src="https://itsfoss.com/favicon.png"
-                                    alt="It's FOSS"
-                                /></div
-                        ></a>
-                        <div class="screen">
-                            <img
-                                src="https://itsfoss.com/content/images/2025/12/obsidian-os.webp"
-                                alt="It's FOSS Distro of the month 2025 December"
-                            />
-                        </div>
-                        <div class="base">
-                            <a href="https://itsfoss.com/obsidianos-review"
-                                >It's FOSS</a
-                            >
-                        </div>
-                    </div>
-                    <div class="laptop-box">
-                        <a
-                            href="https://www.linuxlinks.com/obsidianos-arch-linux-based-distribution/"
-                            title="LinuxLinks"
-                            target="_blank"
-                            ><div class="floating-logo floating-logo-right">
-                                <img
-                                    src="https://linuxlinks.com/favicon.ico"
-                                    alt="LinuxLinks"
-                                /></div
-                        ></a>
-                        <div class="screen">
-                            <img
-                                src="https://www.linuxlinks.com/wp-content/uploads/2025/11/ObsidianOS-desktop.png"
-                                alt="LinuxLinks"
-                            />
-                        </div>
-                        <div class="base">
-                            <a
-                                href="https://www.linuxlinks.com/obsidianos-arch-linux-based-distribution/"
-                                >LinuxLinks</a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="wallpaper-contest-winners">
-                <h2>Monthly Wallpaper Contest Winners!</h2>
-                <h5>January 2026, Join contest on Discord.</h5>
-                <div class="desktop-screenshots">
-                    <div class="laptop-box">
-                        <a
-                            href="/assets/contest-kde.png"
-                            title="Download Wallpaper"
-                            target="_blank"
-                            ><div class="floating-logo floating-logo-left">
-                                <img
-                                    src="https://develop.kde.org/img/kde-logo-white-blue-rounded-source.svg"
-                                    alt="KDE"
-                                /></div
-                        ></a>
-                        <div class="screen">
-                            <img
-                                src="/assets/contest-kde.png"
-                                alt="KDE Wallpaper Winner"
-                            />
-                        </div>
-                        <div class="base">
-                            <a href="https://github.com/mostypc123"
-                                >@mostypc123</a
-                            >
-                        </div>
-                    </div>
-                    <div class="laptop-box">
-                        <a
-                            href="/assets/contest-cosmic.png"
-                            title="Download Wallpaper"
-                            target="_blank"
-                            ><div class="floating-logo floating-logo-right">
-                                <img
-                                    src="https://cdn11.bigcommerce.com/s-pywjnxrcr2/images/stencil/original/image-manager/znbla5m069vx10kz-cosmic-sectiontutorial-orange.png"
-                                    alt="COSMIC"
-                                /></div
-                        ></a>
-                        <div class="screen">
-                            <img
-                                src="/assets/contest-cosmic.png"
-                                alt="COSMIC Wallpaper Winner"
-                            />
-                        </div>
-                        <div class="base">
-                            <a href="https://github.com/rexrad">@rexrad</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="community">
-                <h2>Join the Community</h2>
+        </header>
+        <section class="features">
+            <div class="feature-card">
+                <h2>A/B Partitioning</h2>
                 <p>
-                    Have questions or want to connect with other users? Join our
-                    community on Reddit or Discord.
+                    With A/B partitioning, updates are atomic (optional). If
+                    an update fails, you can simply reboot into the previous
+                    partition, ensuring your system is always bootable.
                 </p>
-                <div class="community-links">
-                    <a
-                        href="https://www.reddit.com/r/obsidian_OS/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="community-link"
-                        >Reddit</a
-                    >
-                    <a
-                        href="https://dsc.gg/obsidianos"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="community-link"
-                        >Discord</a
-                    >
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="footer-content">
-                <div class="footer-left">
-                    <p class="footer-copyright">
-                        &copy; 2026 ObsidianOS Project
-                    </p>
-                    <p class="footer-tagline">
-                        The GNU/Linux distribution with A/B Partitioning
+            </div>
+            <div class="feature-card">
+                <h2>Multiple bases</h2>
+                <p>
+                    Enjoy the power and flexibility of Arch, Debian, Gentoo,
+                    or even Void, with the power of A/B Partitioning
+                </p>
+            </div>
+            <div class="feature-card">
+                <h2>Stable and Reliable</h2>
+                <p>
+                    Built on the stability of ext4, ObsidianOS provides a
+                    reliable computing experience without the complexities
+                    of other filesystems.
+                </p>
+            </div>
+        </section>
+        <section class="base-section">
+            <div class="base-content">
+                <div class="base-text">
+                    <h2>Choose your own base</h2>
+                    <p>
+                        Whether you like Arch, Debian, Gentoo or even Void,
+                        there's an ObsidianOS Edition of it!
                     </p>
                 </div>
-                <div class="footer-links">
-                    <a href="https://wiki.obsidianos.xyz/">Wiki</a>
-                    <a
-                        href="https://github.com/Obsidian-OS/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >GitHub</a
-                    >
+                <div class="base-images">
+                    <img src="https://github.com/archlinux.png" class="base-img base-img-1" alt="Arch Linux" />
+                    <img src="https://github.com/gentoo.png" class="base-img base-img-2" alt="Gentoo" />
+                    <img src="https://github.com/void-linux.png" class="base-img base-img-3" alt="Void" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Openlogo-debianV2.svg/960px-Openlogo-debianV2.svg.png"
+                        class="base-img base-img-4" alt="Debian" />
                 </div>
             </div>
-        </footer>
-        <script>
-            function openurl(url) {
-                window.open(url, "_blank");
-            }
-        </script>
-    </body>
+        </section>
+        <section class="mutable-section">
+            <div class="mutable-content">
+                <div class="mutable-text">
+                    <h2>No enforced immutability</h2>
+                    <p>
+                        Yes! Immutability is completely optional, and even
+                        atomicity! you can enjoy A/B partitions while being
+                        on the bleeding edge!
+                    </p>
+                </div>
+                <div class="mutable-images">
+                    <img src="https://raw.githubusercontent.com/KDE/breeze-icons/refs/heads/master/icons/devices/64/drive-harddisk.svg"
+                        class="mutable-img mutable-img-1" alt="H" />
+                    <img src="https://raw.githubusercontent.com/KDE/breeze-icons/refs/heads/master/icons/emblems/22/emblem-unlocked.svg"
+                        class="mutable-img mutable-img-3" alt="Mutable" />
+                </div>
+            </div>
+        </section>
+        <section class="apps-section">
+            <div class="apps-content">
+                <h2>Access a major list of apps, no compromise.</h2>
+            </div>
+        </section>
+        <section class="featured-on">
+            <h2>As featured on</h2>
+            <div class="desktop-screenshots">
+                <div class="laptop-box">
+                    <a href="https://itsfoss.com/obsidianos-review" title="Distro Of The Month 2025 - It's FOSS"
+                        target="_blank">
+                        <div class="floating-logo floating-logo-left">
+                            <img src="https://itsfoss.com/favicon.png" alt="It's FOSS" />
+                        </div>
+                    </a>
+                    <div class="screen">
+                        <img src="https://itsfoss.com/content/images/2025/12/obsidian-os.webp"
+                            alt="It's FOSS Distro of the month 2025 December" />
+                    </div>
+                    <div class="base">
+                        <a href="https://itsfoss.com/obsidianos-review">It's FOSS</a>
+                    </div>
+                </div>
+                <div class="laptop-box">
+                    <a href="https://www.linuxlinks.com/obsidianos-arch-linux-based-distribution/" title="LinuxLinks"
+                        target="_blank">
+                        <div class="floating-logo floating-logo-right">
+                            <img src="https://linuxlinks.com/favicon.ico" alt="LinuxLinks" />
+                        </div>
+                    </a>
+                    <div class="screen">
+                        <img src="https://www.linuxlinks.com/wp-content/uploads/2025/11/ObsidianOS-desktop.png"
+                            alt="LinuxLinks" />
+                    </div>
+                    <div class="base">
+                        <a href="https://www.linuxlinks.com/obsidianos-arch-linux-based-distribution/">LinuxLinks</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wallpaper-contest-winners">
+            <h2>Monthly Wallpaper Contest Winners!</h2>
+            <h5>January 2026, Join contest on Discord.</h5>
+            <div class="desktop-screenshots">
+                <div class="laptop-box">
+                    <a href="/assets/contest-kde.png" title="Download Wallpaper" target="_blank">
+                        <div class="floating-logo floating-logo-left">
+                            <img src="https://develop.kde.org/img/kde-logo-white-blue-rounded-source.svg" alt="KDE" />
+                        </div>
+                    </a>
+                    <div class="screen">
+                        <img src="/assets/contest-kde.png" alt="KDE Wallpaper Winner" />
+                    </div>
+                    <div class="base">
+                        <a href="https://github.com/mostypc123">@mostypc123</a>
+                    </div>
+                </div>
+                <div class="laptop-box">
+                    <a href="/assets/contest-cosmic.png" title="Download Wallpaper" target="_blank">
+                        <div class="floating-logo floating-logo-right">
+                            <img src="https://cdn11.bigcommerce.com/s-pywjnxrcr2/images/stencil/original/image-manager/znbla5m069vx10kz-cosmic-sectiontutorial-orange.png"
+                                alt="COSMIC" />
+                        </div>
+                    </a>
+                    <div class="screen">
+                        <img src="/assets/contest-cosmic.png" alt="COSMIC Wallpaper Winner" />
+                    </div>
+                    <div class="base">
+                        <a href="https://github.com/rexrad">@rexrad</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="community">
+            <h2>Join the Community</h2>
+            <p>
+                Have questions or want to connect with other users? Join our
+                community on Reddit or Discord.
+            </p>
+            <div class="community-links">
+                <a href="https://www.reddit.com/r/obsidian_OS/" target="_blank" rel="noopener noreferrer"
+                    class="community-link">Reddit</a>
+                <a href="https://dsc.gg/obsidianos" target="_blank" rel="noopener noreferrer"
+                    class="community-link">Discord</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p class="footer-copyright">
+                    &copy; 2026 ObsidianOS Project
+                </p>
+                <p class="footer-tagline">
+                    The GNU/Linux distribution with A/B Partitioning
+                </p>
+            </div>
+            <div class="footer-links">
+                <a href="https://wiki.obsidianos.xyz/">Wiki</a>
+                <a href="https://github.com/Obsidian-OS/" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function openurl(url) {
+            window.open(url, "_blank");
+        }
+
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (hamburger) {
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                navLinks.classList.toggle("active");
+            });
+        }
+    </script>
+</body>
+
 </html>

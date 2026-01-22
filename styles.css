@@ -61,6 +61,35 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    padding: 5px;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary);
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
 }
 
 .nav-left {
@@ -97,14 +126,12 @@ nav {
 }
 
 .nav-links a[href="https://files.obsidianos.xyz/"]:hover {
-    background: linear-gradient(
-        90deg,
-        #667eea 0%,
-        #764ba2 25%,
-        #f093fb 50%,
-        #667eea 75%,
-        #764ba2 100%
-    );
+    background: linear-gradient(90deg,
+            #667eea 0%,
+            #764ba2 25%,
+            #f093fb 50%,
+            #667eea 75%,
+            #764ba2 100%);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -117,9 +144,11 @@ nav {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -256,7 +285,7 @@ header {
 
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin-bottom: 4rem;
 }
@@ -475,16 +504,12 @@ pre {
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(
-            circle at 20% 50%,
+        radial-gradient(circle at 20% 50%,
             rgba(53, 132, 228, 0.1) 0%,
-            transparent 50%
-        ),
-        radial-gradient(
-            circle at 80% 50%,
+            transparent 50%),
+        radial-gradient(circle at 80% 50%,
             rgba(155, 89, 182, 0.1) 0%,
-            transparent 50%
-        );
+            transparent 50%);
     z-index: 1;
 }
 
@@ -571,16 +596,12 @@ pre {
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(
-            circle at 20% 50%,
+        radial-gradient(circle at 20% 50%,
             rgba(53, 132, 228, 0.15) 0%,
-            transparent 50%
-        ),
-        radial-gradient(
-            circle at 80% 50%,
+            transparent 50%),
+        radial-gradient(circle at 80% 50%,
             rgba(155, 89, 182, 0.15) 0%,
-            transparent 50%
-        );
+            transparent 50%);
     z-index: 1;
 }
 
@@ -635,16 +656,12 @@ pre {
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(
-            circle at 20% 50%,
+        radial-gradient(circle at 20% 50%,
             rgba(53, 132, 228, 0.15) 0%,
-            transparent 50%
-        ),
-        radial-gradient(
-            circle at 80% 50%,
+            transparent 50%),
+        radial-gradient(circle at 80% 50%,
             rgba(155, 89, 182, 0.15) 0%,
-            transparent 50%
-        );
+            transparent 50%);
     z-index: 1;
 }
 
@@ -801,18 +818,19 @@ footer {
     0% {
         transform: translateY(0) rotate(calc(var(--rotation) - 8deg)) scale(1);
     }
+
     25% {
-        transform: translateY(-15px) rotate(calc(var(--rotation) - 3deg))
-            scale(1.05);
+        transform: translateY(-15px) rotate(calc(var(--rotation) - 3deg)) scale(1.05);
     }
+
     50% {
-        transform: translateY(-8px) rotate(calc(var(--rotation) + 5deg))
-            scale(1.02);
+        transform: translateY(-8px) rotate(calc(var(--rotation) + 5deg)) scale(1.02);
     }
+
     75% {
-        transform: translateY(-20px) rotate(calc(var(--rotation) + 2deg))
-            scale(1.08);
+        transform: translateY(-20px) rotate(calc(var(--rotation) + 2deg)) scale(1.08);
     }
+
     100% {
         transform: translateY(0) rotate(calc(var(--rotation) - 8deg)) scale(1);
     }
@@ -822,18 +840,19 @@ footer {
     0% {
         transform: translateY(0) rotate(calc(var(--rotation) + 8deg)) scale(1);
     }
+
     25% {
-        transform: translateY(-20px) rotate(calc(var(--rotation) + 3deg))
-            scale(1.08);
+        transform: translateY(-20px) rotate(calc(var(--rotation) + 3deg)) scale(1.08);
     }
+
     50% {
-        transform: translateY(-8px) rotate(calc(var(--rotation) - 5deg))
-            scale(1.02);
+        transform: translateY(-8px) rotate(calc(var(--rotation) - 5deg)) scale(1.02);
     }
+
     75% {
-        transform: translateY(-15px) rotate(calc(var(--rotation) - 2deg))
-            scale(1.05);
+        transform: translateY(-15px) rotate(calc(var(--rotation) - 2deg)) scale(1.05);
     }
+
     100% {
         transform: translateY(0) rotate(calc(var(--rotation) + 8deg)) scale(1);
     }
@@ -870,24 +889,199 @@ footer {
 }
 
 @media (max-width: 768px) {
+    main {
+        padding: 6rem 0 4rem;
+        /* No side padding to allow full-width sections naturally */
+        overflow-x: hidden;
+    }
+
+    nav {
+        padding: 1rem;
+    }
+
+    /* Content containers that need spacing */
+    .hero-content,
+    .features,
+    .community,
+    .post-install,
+    .install-options {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
     .nav-links {
-        display: none;
+        position: fixed;
+        top: 73px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 73px);
+        background: var(--card-bg);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease;
+        border-top: 1px solid var(--border-color);
+        z-index: 999;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-logo-container {
+        margin: 0 auto;
+    }
+
+    .hero-text {
+        padding-left: 0;
     }
 
     .hero-title {
-        font-size: 3rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .section-title {
         font-size: 2.5rem;
     }
 
-    .section-description {
+    .hero-subtitle {
         font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    /* Full width sections: naturally span 100% since main has 0 padding */
+    .base-section,
+    .mutable-section,
+    .apps-section,
+    .featured-on,
+    .wallpaper-contest-winners {
+        width: 100%;
+        margin: 4rem 0;
+        border-radius: 0;
+        left: 0;
+        right: 0;
+        /* Stack content vertically: text on top, images below */
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        min-height: auto;
+        padding: 2rem 0;
+    }
+
+    .base-content,
+    .mutable-content {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .base-images,
+    .mutable-images {
+        display: none;
+    }
+
+    .mutable-content {
+        flex-direction: column-reverse;
+    }
+
+    .screen {
+        height: auto;
+        aspect-ratio: 16/10;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .apps-content h2 {
+        font-size: 2.5rem;
+        padding: 0 1rem;
+    }
+
+    /* Switch to static/relative positioning for text to avoid overlap */
+    .featured-on h2,
+    .wallpaper-contest-winners h2 {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-bottom: 1rem;
+        padding-top: 3rem;
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .wallpaper-contest-winners h5 {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-bottom: 2rem;
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    /* Simple vertical stack for screenshots on mobile */
+    .desktop-screenshots {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 1rem;
+        width: 100%;
+        overflow: visible;
+    }
+
+    .laptop-box {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .featured-on .desktop-screenshots,
+    .wallpaper-contest-winners .desktop-screenshots {
+        margin-top: 2rem;
+    }
+
+    /* Fix floating logos being cut off on mobile */
+    .floating-logo-left {
+        left: 0;
+        top: -30px;
+    }
+
+    .floating-logo-right {
+        right: 0;
+        top: -30px;
+    }
+
+    /* Ensure they are smaller if needed */
+    .floating-logo {
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -1018,15 +1212,19 @@ footer {
     0% {
         background-position: 0% 0%;
     }
+
     25% {
         background-position: 100% 0%;
     }
+
     50% {
         background-position: 100% 100%;
     }
+
     75% {
         background-position: 0% 100%;
     }
+
     100% {
         background-position: 0% 0%;
     }
