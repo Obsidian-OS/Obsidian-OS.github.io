@@ -891,7 +891,6 @@ footer {
 @media (max-width: 768px) {
     main {
         padding: 6rem 0 4rem;
-        /* No side padding to allow full-width sections naturally */
         overflow-x: hidden;
     }
 
@@ -899,7 +898,6 @@ footer {
         padding: 1rem;
     }
 
-    /* Content containers that need spacing */
     .hero-content,
     .features,
     .community,
@@ -972,7 +970,6 @@ footer {
         font-size: 1rem;
     }
 
-    /* Full width sections: naturally span 100% since main has 0 padding */
     .base-section,
     .mutable-section,
     .apps-section,
@@ -983,7 +980,6 @@ footer {
         border-radius: 0;
         left: 0;
         right: 0;
-        /* Stack content vertically: text on top, images below */
         flex-direction: column;
         align-items: center;
         height: auto;
@@ -1021,7 +1017,6 @@ footer {
         padding: 0 1rem;
     }
 
-    /* Switch to static/relative positioning for text to avoid overlap */
     .featured-on h2,
     .wallpaper-contest-winners h2 {
         position: relative;
@@ -1046,7 +1041,6 @@ footer {
         font-size: 1rem;
     }
 
-    /* Simple vertical stack for screenshots on mobile */
     .desktop-screenshots {
         display: flex;
         flex-direction: column;
@@ -1067,7 +1061,6 @@ footer {
         margin-top: 2rem;
     }
 
-    /* Fix floating logos being cut off on mobile */
     .floating-logo-left {
         left: 0;
         top: -30px;
@@ -1078,7 +1071,6 @@ footer {
         top: -30px;
     }
 
-    /* Ensure they are smaller if needed */
     .floating-logo {
         width: 40px;
         height: 40px;
