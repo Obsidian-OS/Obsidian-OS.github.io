@@ -18,4 +18,3 @@ if command -v yay >/dev/null 2>&1; then
   yay -S obsidianctl-git --overwrite '*' --noconfirm --needed
 fi
 echo "Done!"
-echo "If using Arch based ObsidianOS install the AUR package obos-genissue-git."
