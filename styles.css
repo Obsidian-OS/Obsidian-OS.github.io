@@ -944,6 +944,7 @@ footer {
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
+        min-width: 0;
     }
 
     .hero-logo-container {
@@ -952,14 +953,22 @@ footer {
 
     .hero-text {
         padding-left: 0;
+        min-width: 0;
+        width: 100%;
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    .hero-text .main-title {
+        max-width: 100%;
+        font-size: clamp(2rem, 10vw, 3rem);
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        overflow-wrap: anywhere;
     }
 
     .hero-subtitle {
+        max-width: 100%;
         font-size: 1.1rem;
+        line-height: 1.4;
     }
 
     .section-title {
