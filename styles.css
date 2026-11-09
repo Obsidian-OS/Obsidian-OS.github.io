@@ -70,6 +70,11 @@ nav {
     cursor: pointer;
     gap: 6px;
     padding: 5px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .hamburger-menu span {
@@ -889,6 +894,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    :root {
+        --mobile-nav-height: 73px;
+    }
+
     main {
         padding: 6rem 0 4rem;
         overflow-x: hidden;
@@ -915,26 +924,35 @@ footer {
 
     .nav-links {
         position: fixed;
-        top: 73px;
-        left: -100%;
+        top: var(--mobile-nav-height);
+        left: 0;
         width: 100%;
-        height: calc(100vh - 73px);
+        height: calc(100vh - var(--mobile-nav-height));
+        height: calc(100dvh - var(--mobile-nav-height));
         background: var(--card-bg);
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        transition: 0.3s ease;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        padding: 1.5rem 1rem max(1.5rem, env(safe-area-inset-bottom));
+        transform: translateX(-100%);
+        visibility: hidden;
+        transition: transform 0.3s ease, visibility 0s linear 0.3s;
         border-top: 1px solid var(--border-color);
         z-index: 999;
     }
 
     .nav-links a {
         font-size: 1.5rem;
-        margin: 1rem 0;
+        margin: 0.5rem 0;
     }
 
     .nav-links.active {
-        left: 0;
+        transform: translateX(0);
+        visibility: visible;
+        transition: transform 0.3s ease, visibility 0s;
     }
 
     .hamburger-menu {
