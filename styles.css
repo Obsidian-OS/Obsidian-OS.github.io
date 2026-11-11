@@ -898,6 +898,22 @@ footer {
         --mobile-nav-height: 73px;
     }
 
+    .download-page main {
+        width: 100%;
+        padding: 6rem 1rem 4rem;
+    }
+
+    .download-page .main-title {
+        font-size: clamp(2rem, 9vw, 4rem);
+        line-height: 1.1;
+        overflow-wrap: anywhere;
+    }
+
+    .download-page .subtitle {
+        font-size: clamp(1rem, 5vw, 1.5rem);
+        overflow-wrap: anywhere;
+    }
+
     main {
         padding: 6rem 0 4rem;
         overflow-x: hidden;
