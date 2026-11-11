@@ -692,7 +692,7 @@ pre {
     margin-bottom: 0;
 }
 
-footer {
+/* footer {
     padding: 3rem 2rem;
     background: var(--card-bg);
     border-top: 1px solid var(--border-color);
@@ -740,6 +740,178 @@ footer {
 
 .footer-links a:hover {
     color: var(--accent-blue);
+} */
+
+/* ==========================
+   Modern ObsidianOS Footer
+========================== */
+
+.site-footer {
+    background: #1b1b1f;
+    color: #e5e5e5;
+    padding: 60px 8% 25px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+}
+
+.footer-content {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr;
+    gap: 70px;
+    padding-bottom: 50px;
+}
+
+/* Brand */
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 18px;
+}
+
+.footer-logo img {
+    width: 43px;
+    height: 43px;
+    object-fit: contain;
+}
+
+.footer-logo h2 {
+    font-size: 23px;
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
+}
+
+.footer-brand p {
+    max-width: 310px;
+    color: #a5a5b0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Section Headings */
+
+.footer-links h3,
+.footer-community h3 {
+    color: #fff;
+    font-size: 16px;
+    margin: 5px 0 22px;
+    font-weight: 600;
+}
+
+/* Quick Links */
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-links a {
+    color: #a5a5b0;
+    text-decoration: none;
+    font-size: 14px;
+    width: fit-content;
+    transition: all 0.25s ease;
+}
+
+.footer-links a:hover {
+    color: #4299ff;
+    transform: translateX(5px);
+}
+
+/* Community */
+
+.footer-community p {
+    color: #a5a5b0;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 280px;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 17px;
+    border: 1px solid #44444d;
+    border-radius: 8px;
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+.github-link svg {
+    width: 19px;
+    height: 19px;
+}
+
+.github-link:hover {
+    background: #292b35;
+    border-color: #4299ff;
+    color: #4299ff;
+}
+
+/* Copyright */
+
+.footer-bottom {
+    max-width: 1250px;
+    margin: auto;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.09);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-bottom p,
+.footer-bottom span {
+    margin: 0;
+    color: #858590;
+    font-size: 13px;
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 550px) {
+    .site-footer {
+        padding: 40px 7% 22px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-bottom: 35px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
 }
 
 .desktop-screenshots {
