@@ -196,15 +196,42 @@
             window.open(url, "_blank");
         }
 
-        const hamburger = document.querySelector(".hamburger-menu");
-        const navLinks = document.querySelector(".nav-links");
+        document.addEventListener("click", (event) => {
+            if (!(event.target instanceof Element)) {
+                return;
+            }
 
-        if (hamburger) {
-            hamburger.addEventListener("click", () => {
-                hamburger.classList.toggle("active");
-                navLinks.classList.toggle("active");
-            });
-        }
+            const hamburger = event.target.closest(".hamburger-menu");
+            if (!hamburger) {
+                return;
+            }
+
+            const navLinks = document.getElementById(hamburger.getAttribute("aria-controls"));
+            if (!navLinks) {
+                return;
+            }
+
+            const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+            hamburger.setAttribute("aria-expanded", String(!isExpanded));
+            hamburger.classList.toggle("active", !isExpanded);
+            navLinks.classList.toggle("active", !isExpanded);
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key !== "Escape") {
+                return;
+            }
+
+            const hamburger = document.querySelector(".hamburger-menu.active");
+            if (!hamburger) {
+                return;
+            }
+
+            hamburger.setAttribute("aria-expanded", "false");
+            hamburger.classList.remove("active");
+            document.getElementById(hamburger.getAttribute("aria-controls"))?.classList.remove("active");
+            hamburger.focus();
+        });
     </script>
 </body>
 </html>
