@@ -710,6 +710,7 @@ footer {
 
 footer .footer-column {
     position: static;
+    z-index: auto;
     width: auto;
     padding: 0;
     background: transparent;
@@ -833,7 +834,7 @@ footer nav[aria-label="Community"] .footer-link-list a:focus-visible {
     }
 
     .footer-content {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: minmax(0, 1fr);
         gap: 1.25rem 1.75rem;
     }
 
@@ -857,10 +858,10 @@ footer nav[aria-label="Community"] .footer-link-list a:focus-visible {
         grid-column: auto;
     }
 
-    .footer-link-list {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 0.75rem;
+    footer nav[aria-label="Quick links"] .footer-link-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .footer-copyright {
@@ -1059,6 +1060,7 @@ footer nav[aria-label="Community"] .footer-link-list a:focus-visible {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        gap: 0.5rem;
         overflow-y: auto;
         overscroll-behavior: contain;
         -webkit-overflow-scrolling: touch;
@@ -1071,8 +1073,11 @@ footer nav[aria-label="Community"] .footer-link-list a:focus-visible {
     }
 
     .nav-links a {
+        width: 100%;
+        padding: 0.75rem 1rem;
         font-size: 1.5rem;
-        margin: 0.5rem 0;
+        margin: 0;
+        text-align: center;
     }
 
     .nav-links.active {
