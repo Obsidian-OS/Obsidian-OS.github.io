@@ -693,179 +693,53 @@ pre {
 }
 
 footer {
-    padding: 2rem 2rem 1.25rem;
+    padding: 3rem 2rem;
     background: var(--card-bg);
     border-top: 1px solid var(--border-color);
-    margin-top: 2.5rem;
+    margin-top: 4rem;
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(0, 1.3fr) repeat(2, minmax(0, 1fr));
-    align-items: start;
-    gap: 1.5rem 2.75rem;
-}
-
-footer .footer-column {
-    position: static;
-    width: auto;
-    padding: 0;
-    background: transparent;
-    border: 0;
-}
-
-.footer-brand {
-    min-width: 0;
-}
-
-.footer-brand-heading {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.625rem;
-    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.footer-logo {
-    display: block;
-    width: 36px;
-    height: 36px;
-    object-fit: contain;
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.footer-name {
+.footer-copyright {
     color: var(--text-primary);
-    font-size: 1.05rem;
-    font-weight: 600;
-    line-height: 1.25;
-}
-
-.footer-heading {
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-    font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .footer-tagline {
     color: var(--text-secondary);
-    font-size: 0.85rem;
-    line-height: 1.5;
-    max-width: 21rem;
+    font-size: 0.9rem;
 }
 
-.footer-link-list {
+.footer-links {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
-    list-style: none;
+    gap: 2rem;
 }
 
-.footer-link-list a {
-    display: inline-block;
-    padding: 0.1rem 0;
+.footer-links a {
     color: var(--text-secondary);
-    font-size: 0.875rem;
-    line-height: 1.5;
     text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.footer-link-list a:hover,
-.footer-link-list a:focus-visible {
+.footer-links a:hover {
     color: var(--accent-blue);
-    transform: translateX(1px);
-}
-
-.footer-link-list a:focus-visible {
-    outline: 2px solid var(--accent-blue);
-    outline-offset: 2px;
-}
-
-footer nav[aria-label="Community"] .footer-link-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-footer nav[aria-label="Community"] .footer-link-list a {
-    display: inline-flex;
-    width: 2.25rem;
-    height: 2.25rem;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border-radius: 50%;
-    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
-}
-
-footer nav[aria-label="Community"] .footer-link-list a svg {
-    display: block;
-    width: 1.25rem;
-    height: 1.25rem;
-    fill: currentColor;
-}
-
-footer nav[aria-label="Community"] .footer-link-list a:hover,
-footer nav[aria-label="Community"] .footer-link-list a:focus-visible {
-    color: var(--text-primary);
-    background-color: var(--border-color);
-    transform: translateY(-2px);
-}
-
-.footer-copyright {
-    grid-column: 1 / -1;
-    margin-top: 0;
-    padding-top: 0.75rem;
-    border-top: 1px solid var(--border-color);
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-    line-height: 1.5;
-}
-
-@media (max-width: 700px) {
-    footer {
-        padding: 1.75rem 1.5rem 1rem;
-    }
-
-    .footer-content {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.25rem 1.75rem;
-    }
-
-    .footer-brand {
-        grid-column: 1 / -1;
-    }
-}
-
-@media (max-width: 460px) {
-    footer {
-        padding: 1.5rem 1.25rem 1rem;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .footer-brand,
-    .footer-copyright {
-        grid-column: auto;
-    }
-
-    .footer-link-list {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 0.75rem;
-    }
-
-    .footer-copyright {
-        margin-top: 0;
-    }
 }
 
 .desktop-screenshots {
